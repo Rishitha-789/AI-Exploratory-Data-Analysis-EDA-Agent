@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI EDA Agent</title>
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom right, #eef2f7, #dce3ee);
+            color: #1e1e1e;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background: white;
+            width: 500px;
+            padding: 40px 35px;
+            border-radius: 16px;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+            border: 1px solid #e3e6ec;
+            animation: fadeIn 0.4s ease;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 30px;
+            font-weight: 700;
+            color: #2b3a4a;
+            letter-spacing: 0.2px;
+        }
+
+        label {
+            font-size: 15px;
+            font-weight: 600;
+            color: #3e4a56;
+        }
+
+        input[type="file"] {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #c7ccd6;
+            border-radius: 8px;
+            background: #fafbfc;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        button {
+            background: #226bfd;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 600;
+            margin-top: 25px;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.25s ease;
+        }
+
+        button:hover {
+            background: #1a57d6;
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer {
+            margin-top: 35px;
+            text-align: center;
+            font-size: 13px;
+            color: #6b7684;
+            padding-top: 18px;
+            border-top: 1px solid #d4d9e3;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>AI-Powered Exploratory Data Analysis</h1>
+
+        <form action="/analyze" method="POST" enctype="multipart/form-data">
+            <label>Select CSV File</label>
+            <input type="file" name="dataset" accept=".csv" required>
+            <button type="submit">Analyze Dataset</button>
+        </form>
+
+        <footer>
+            AI EDA Agent • Automated Insights and Visualization
+        </footer>
+    </div>
+
+</body>
+</html>
